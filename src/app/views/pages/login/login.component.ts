@@ -32,6 +32,9 @@ export class LoginComponent {
       rememberMe: [false]
     });
   }
+  signInWithGoogle() {
+    window.location.href = 'https://localhost:7202/api/jwtauth/auth/google';
+  }
 
   onSubmit() {
     if (this.loginForm.valid) {
