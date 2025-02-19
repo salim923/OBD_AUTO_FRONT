@@ -1,0 +1,15 @@
+<app-header></app-header>
+<section class="pricing">
+  <h2>Pricing Plans</h2>
+  <div class="pricing-grid">
+    <div class="pricing-card" *ngFor="let plan of plans">
+      <h3>{{ plan.title }}</h3>
+      <p class="price">{{ plan.price }}</p>
+      <ul>
+        <li *ngFor="let feature of plan.features">{{ feature }}</li>
+      </ul>
+      <button mat-raised-button color="custom-color">Choose Plan</button>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
