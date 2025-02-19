@@ -40,7 +40,7 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       const { email, password } = this.loginForm.value;
       console.log(this.loginForm.value);
-      // Implement login logic here
+
       this.authservice.login(email, password).subscribe({
         next: (response) => {
           localStorage.setItem('token', response.token);

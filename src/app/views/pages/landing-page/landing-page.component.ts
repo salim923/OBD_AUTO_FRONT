@@ -3,85 +3,84 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { RouterLink } from "@angular/router";
 import { CommonModule } from "@angular/common";
+import {FooterComponent} from "../../../layout/footer/footer.component";
+import {HeaderComponent} from "../../../layout/header/header.component";
 
 @Component({
   selector: "app-landing-page",
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss'],
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatIconModule, RouterLink]
+  imports: [CommonModule, MatButtonModule, MatIconModule, RouterLink, FooterComponent, HeaderComponent]
 })
 export class LandingPageComponent {
   features = [
     {
-      icon: "speed",
-      title: "Real-time Monitoring",
-      description:
-        "Track your vehicle's performance, location, and health status in real-time with advanced IoT sensors.",
+      icon: "calendar_today",
+      title: "Smart Scheduling",
+      description: "AI-powered maintenance scheduling based on your vehicle's specific needs and usage patterns."
     },
     {
-      icon: "trending_up",
-      title: "Predictive Maintenance",
-      description:
-        "Stay ahead of potential issues with AI-powered predictions and proactive maintenance recommendations.",
+      icon: "notifications",
+      title: "Timely Reminders",
+      description: "Get personalized alerts for upcoming maintenance tasks, inspections, and renewals."
     },
     {
-      icon: "bolt",
-      title: "Smart Diagnostics",
-      description: "Get instant, detailed insights into your vehicle's condition with our advanced diagnostic tools.",
+      icon: "history",
+      title: "Maintenance History",
+      description: "Keep a detailed digital record of all maintenance activities and repairs for your vehicles."
     },
     {
-      icon: "eco",
-      title: "Fuel Efficiency Optimization",
-      description:
-        "Reduce fuel consumption and costs with our intelligent route planning and driving behavior analysis.",
+      icon: "local_gas_station",
+      title: "Fuel Efficiency Tracking",
+      description: "Monitor and optimize your vehicle's fuel consumption with our advanced analytics."
     },
     {
-      icon: "security",
-      title: "Enhanced Security",
-      description: "Protect your fleet with advanced theft detection, geofencing, and remote immobilization features.",
+      icon: "build",
+      title: "Garage Integration",
+      description: "Seamlessly schedule appointments with our network of trusted partner garages."
     },
     {
-      icon: "insert_chart",
-      title: "Comprehensive Analytics",
-      description: "Make data-driven decisions with our powerful analytics dashboard and customizable reports.",
-    },
+      icon: "dashboard",
+      title: "Comprehensive Dashboard",
+      description: "Get a clear overview of all your vehicles' status and maintenance needs in one place."
+    }
   ];
 
   benefits = [
     {
-      title: "Cost Reduction",
-      description: "Minimize maintenance costs and fuel consumption through predictive analytics and optimization.",
+      title: "Cost Savings",
+      description: "Reduce maintenance costs through timely servicing and preventing major breakdowns."
     },
     {
-      title: "Increased Uptime",
-      description: "Reduce vehicle downtime with proactive maintenance and quick issue resolution.",
+      title: "Extended Vehicle Life",
+      description: "Prolong your vehicle's lifespan with regular, optimized maintenance schedules."
     },
-    { title: "Improved Safety", description: "Enhance driver safety with real-time monitoring and behavior analysis." },
     {
-      title: "Streamlined Operations",
-      description: "Optimize fleet operations with data-driven insights and automated processes.",
+      title: "Peace of Mind",
+      description: "Never miss an important maintenance task with our smart reminder system."
     },
+    {
+      title: "Time Efficiency",
+      description: "Save time with streamlined maintenance processes and easy garage appointments."
+    }
   ];
 
   testimonials = [
     {
-      quote:
-        "AutoCare has revolutionized our fleet management. We've seen a 30% reduction in maintenance costs and significant improvement in vehicle uptime.",
+      quote: "AutoCare has transformed how I manage my fleet. We've seen a significant reduction in downtime and maintenance costs.",
       author: "John Smith",
-      company: "LogiTech Solutions",
+      company: "Smith Logistics"
     },
     {
-      quote:
-        "The real-time monitoring and predictive maintenance features have been game-changers for our business. AutoCare is an indispensable tool for modern fleet management.",
+      quote: "As a busy professional, AutoCare ensures my car is always in top condition without me having to worry about it.",
       author: "Sarah Johnson",
-      company: "GreenTransport Inc.",
+      company: "Tech Innovations Inc."
     },
     {
-      quote:
-        "AutoCare's user-friendly interface and comprehensive analytics have made managing our large fleet effortless. It's an excellent investment for any company with a vehicle fleet.",
+      quote: "The predictive maintenance feature has saved us from several potential breakdowns. It's an invaluable tool for our business.",
       author: "Michael Chen",
-      company: "Metro Delivery Services",
-    },
+      company: "City Cab Services"
+    }
   ];
 }

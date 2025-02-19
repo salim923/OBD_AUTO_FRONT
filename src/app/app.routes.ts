@@ -25,6 +25,41 @@ export const routes: Routes = [
     }
   },
   {
+    path: 'services',
+    loadComponent: () => import('./views/pages/services/services.component').then(m => m.ServicesComponent),
+    data: {
+      title: 'Services'
+    }
+  },
+  {
+    path: 'pricing',
+    loadComponent: () => import('./views/pages/pricing/pricing.component').then(m => m.PricingComponent),
+    data: {
+      title: 'Pricing'
+    }
+  },
+  {
+    path: 'garages',
+    loadComponent: () => import('./views/pages/garages/garages.component').then(m => m.GaragesComponent),
+    data: {
+      title: 'Garages'
+    }
+  },
+  {
+    path: 'features',
+    loadComponent: () => import('./views/pages/features/features.component').then(m => m.FeaturesComponent),
+    data: {
+      title: 'Features'
+    }
+  },
+  {
+    path: 'about-us',
+    loadComponent: () => import('./views/pages/about-us/about-us.component').then(m => m.AboutUsComponent),
+    data: {
+      title: 'About-us'
+    }
+  },
+  {
     path: '',
     canActivate: [AuthGuard],
     children: [

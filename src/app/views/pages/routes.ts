@@ -28,5 +28,41 @@ export const routes: Routes = [
     data: {
       title: 'Register Page'
     }
+  },
+  {
+    path: 'services',
+    loadComponent: () => import('./services/services.component').then(m => m.ServicesComponent),
+    data: {
+      title: 'Services'
+    }
+  },
+  {
+    path: 'pricing',
+    loadComponent: () => import('./pricing/pricing.component').then(m => m.PricingComponent),
+    data: {
+      title: 'Pricing'
+    }
+  },
+
+  {
+    path: 'garages',
+    loadComponent: () => import('./garages/garages.component').then(m => m.GaragesComponent),
+    data: {
+      title: 'Garages'
+    }
+  },
+  {
+    path: 'features',
+    loadComponent: () => import('./features/features.component').then(m => m.FeaturesComponent),
+    data: {
+      title: 'Features'
+    }
+  },
+  {
+    path: 'about-us',
+    loadComponent: () => import('./about-us/about-us.component').then(m => m.AboutUsComponent),
+    data: {
+      title: 'About-us'
+    }
   }
 ];
