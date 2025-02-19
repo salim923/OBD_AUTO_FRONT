@@ -51,9 +51,9 @@ export class DefaultHeaderComponent extends HeaderComponent {
     super();
   }
 
+
   logout() {
     this.authService.logout();
-    this.router.navigate(['/login']);
   }
 
   sidebarId = input('sidebar1');
