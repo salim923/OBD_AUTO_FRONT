@@ -18,7 +18,7 @@ export const appConfig: ApplicationConfig = {
       }),
       withEnabledBlockingInitialNavigation(),
       withViewTransitions(),
-      withHashLocation()
+      //withHashLocation()
     ),
     importProvidersFrom(SidebarModule, DropdownModule),
     provideHttpClient(),
