@@ -6,13 +6,15 @@ import { delay, filter, map, tap } from 'rxjs/operators';
 import { ColorModeService } from '@coreui/angular';
 import { IconSetService } from '@coreui/icons-angular';
 import { iconSubset } from './icons/icon-subset';
-
+import { jwtDecode } from "jwt-decode";
 @Component({
   selector: 'app-root',
   template: '<router-outlet></router-outlet>',
   imports: [RouterOutlet]
 })
 export class AppComponent implements OnInit {
+  userName: string | null = null;
+
   title = 'OBD';
   readonly #destroyRef: DestroyRef = inject(DestroyRef);
   readonly #activatedRoute: ActivatedRoute = inject(ActivatedRoute);
@@ -35,6 +37,12 @@ export class AppComponent implements OnInit {
     const token = localStorage.getItem('token');
     console.log('tokend',token);
     if (token) {
+      const decodedToken: any = jwtDecode(token);
+      this.userName = decodedToken.sub;
+      console.log('userName', this.userName);
+      if (this.userName) {
+        localStorage.setItem('userName', this.userName);
+      }
       this.#router.navigate(['/dashboard']);
     }
 

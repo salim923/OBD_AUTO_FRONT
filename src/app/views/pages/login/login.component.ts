@@ -6,6 +6,7 @@ import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {MatIcon} from "@angular/material/icon";
 import {MatButton} from "@angular/material/button";
+import {jwtDecode} from "jwt-decode";
 
 @Component({
   selector: 'app-login',
@@ -22,6 +23,7 @@ import {MatButton} from "@angular/material/button";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  userName: string | null = '';
   loginForm: FormGroup;
   hidePassword = true;
 
@@ -34,14 +36,7 @@ export class LoginComponent implements OnInit {
   }
 
 
-  ngOnInit() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const token = urlParams.get('token');
-    if (token) {
-      localStorage.setItem('token', token);
-      this.router.navigate(['/dashboard']);
-    }
-  }
+  ngOnInit() {}
 
   signInWithGoogle() {
     window.location.href = 'https://localhost:7202/api/jwtauth/auth/google';

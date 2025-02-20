@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { DefaultLayoutComponent } from './layout';
 import { AuthGuard } from '../guards/auth.guard';
+import {GoogleRedirectComponent} from "./services/google-redirect/google-redirect.component";
 
 export const routes: Routes = [
   {
@@ -44,6 +45,13 @@ export const routes: Routes = [
     loadComponent: () => import('./views/pages/garages/garages.component').then(m => m.GaragesComponent),
     data: {
       title: 'Garages'
+    }
+  },
+  {
+    path: 'google-redirect',
+    loadComponent: () => import('./services/google-redirect/google-redirect.component').then(m => m.GoogleRedirectComponent),
+    data: {
+      title: 'Google-redirect'
     }
   },
   {
