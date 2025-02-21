@@ -21,6 +21,12 @@ export class AuthService {
   }
 
 
+  loginWithFacebook(): void {
+    window.location.href = 'https://localhost:7202/api/jwtauth/auth/facebook';
+  }
+  loginWithGoogle(): void {
+    window.location.href = 'https://localhost:7202/api/jwtauth/auth/google';
+  }
 
 
   register(username: string | null | undefined, email: string | null | undefined, password: string | null | undefined): Observable<string> {

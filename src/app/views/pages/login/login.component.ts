@@ -38,8 +38,14 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {}
 
+
+
+  signInWithFacebook() {
+    this.authService.loginWithFacebook();
+  }
+
   signInWithGoogle() {
-    window.location.href = 'https://localhost:7202/api/jwtauth/auth/google';
+    this.authService.loginWithGoogle();
   }
 
   onSubmit() {

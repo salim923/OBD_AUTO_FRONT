@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { DefaultLayoutComponent } from './layout';
 import { AuthGuard } from '../guards/auth.guard';
 import {GoogleRedirectComponent} from "./services/google-redirect/google-redirect.component";
+import {PrivacyPolicyComponent} from "./views/pages/privacy-policy/privacy-policy.component";
 
 export const routes: Routes = [
   {
@@ -66,6 +67,13 @@ export const routes: Routes = [
     loadComponent: () => import('./views/pages/about-us/about-us.component').then(m => m.AboutUsComponent),
     data: {
       title: 'About-us'
+    }
+  },
+  {
+    path: 'privacy-policy',
+    loadComponent: () => import('./views/pages/privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent),
+    data: {
+      title: 'Privacy-policy'
     }
   },
   {
