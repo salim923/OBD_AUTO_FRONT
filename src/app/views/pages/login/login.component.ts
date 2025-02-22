@@ -7,6 +7,7 @@ import {MatInput} from "@angular/material/input";
 import {MatIcon} from "@angular/material/icon";
 import {MatButton} from "@angular/material/button";
 import {jwtDecode} from "jwt-decode";
+import {MatCheckbox} from "@angular/material/checkbox";
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ import {jwtDecode} from "jwt-decode";
     MatInput,
     MatIcon,
     MatButton,
-    RouterLink
+    RouterLink,
+    MatCheckbox
   ],
   styleUrls: ['./login.component.scss']
 })
@@ -62,5 +64,9 @@ export class LoginComponent implements OnInit {
         },
       });
     }
+  }
+
+  signInWithApple() {
+
   }
 }

@@ -3,11 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';
 
 @Component({
-  selector: 'app-google-redirect',
-  templateUrl: './google-redirect.component.html',
-  styleUrls: ['./google-redirect.component.scss'],
+  selector: 'app-auth-redirect',
+  templateUrl: './Auth-redirect.component.html',
+  styleUrls: ['./Auth-redirect.component.scss'],
 })
-export class GoogleRedirectComponent implements OnInit {
+export class AuthRedirectComponent implements OnInit {
   userName: string | null = '';
 
   constructor(private route: ActivatedRoute, private router: Router) {}

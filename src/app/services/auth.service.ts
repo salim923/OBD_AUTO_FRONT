@@ -29,9 +29,8 @@ export class AuthService {
   }
 
 
-  register(username: string | null | undefined, email: string | null | undefined, password: string | null | undefined): Observable<string> {
-    const body = { username, email, password };
-    return this.http.post(this.apiUrl + '/register', body, { responseType: 'text' });
+  register(formData: any): Observable<string> {
+    return this.http.post(this.apiUrl + '/register', formData, { responseType: 'text' });
   }
 
   getToken() {

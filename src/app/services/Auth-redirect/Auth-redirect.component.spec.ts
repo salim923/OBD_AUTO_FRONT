@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GoogleRedirectComponent } from './google-redirect.component';
+import { AuthRedirectComponent } from './Auth-redirect.component';
 
 describe('GoogleRedirectComponent', () => {
-  let component: GoogleRedirectComponent;
-  let fixture: ComponentFixture<GoogleRedirectComponent>;
+  let component: AuthRedirectComponent;
+  let fixture: ComponentFixture<AuthRedirectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GoogleRedirectComponent]
+      imports: [AuthRedirectComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GoogleRedirectComponent);
+    fixture = TestBed.createComponent(AuthRedirectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

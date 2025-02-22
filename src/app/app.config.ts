@@ -4,6 +4,7 @@ import { provideRouter, withEnabledBlockingInitialNavigation, withHashLocation, 
 import { provideHttpClient } from '@angular/common/http';
 import { DropdownModule, SidebarModule } from '@coreui/angular';
 import { IconSetService } from '@coreui/icons-angular';
+import { MatNativeDateModule } from '@angular/material/core';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -20,7 +21,7 @@ export const appConfig: ApplicationConfig = {
       withViewTransitions(),
       //withHashLocation()
     ),
-    importProvidersFrom(SidebarModule, DropdownModule),
+    importProvidersFrom(SidebarModule, DropdownModule,MatNativeDateModule),
     provideHttpClient(),
     IconSetService,
     provideAnimationsAsync()
