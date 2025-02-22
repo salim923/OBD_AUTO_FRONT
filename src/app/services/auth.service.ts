@@ -27,6 +27,9 @@ export class AuthService {
   loginWithGoogle(): void {
     window.location.href = 'https://localhost:7202/api/jwtauth/auth/google';
   }
+  loginWithGitHub(): void {
+    window.location.href = 'https://localhost:7202/login-github';
+  }
 
 
   register(formData: any): Observable<string> {

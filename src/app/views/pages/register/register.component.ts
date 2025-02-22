@@ -32,10 +32,10 @@ export class RegisterComponent implements OnInit {
       username: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [
-        Validators.required,
+        /*Validators.required,
         Validators.minLength(8),
         Validators.pattern(/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/),
-      ]],
+     */ ]],
       confirmPassword: ['', Validators.required],
       phone: ['', Validators.required],
       cin: ['', Validators.required],
@@ -61,8 +61,12 @@ export class RegisterComponent implements OnInit {
   }
 
   signInWithGoogle() {
+    this.authService.loginWithGoogle();
   }
 
+  signInWithGitHub() {
+    this.authService.loginWithGitHub();
+  }
   signInWithApple() {
   }
 
