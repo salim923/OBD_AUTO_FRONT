@@ -4,23 +4,23 @@
   min-height: 100vh;
 
   .left-panel {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-    padding: 3rem;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 2.5rem;
     color: white;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 
     .logo {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 4rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      font-size: 1.5rem;
-      font-weight: 600;
+      gap: 0.75rem;
 
-      mat-icon {
+      i {
         font-size: 2rem;
-        height: 2rem;
-        width: 2rem;
       }
     }
 
@@ -28,81 +28,115 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      max-width: 480px;
-      margin: 0 auto;
+      gap: 2.5rem;
 
       h1 {
-        font-size: 3rem;
-        font-weight: 600;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
         margin-bottom: 1rem;
       }
 
       > p {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         opacity: 0.9;
-        margin-bottom: 3rem;
+        line-height: 1.6;
       }
     }
 
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-bottom: 4rem;
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
 
-      .stat-item {
+      .feature-item {
         background: rgba(255, 255, 255, 0.1);
-        padding: 1.5rem;
         border-radius: 1rem;
+        padding: 1.75rem;
+        display: flex;
+        gap: 1.25rem;
+        transition: all 0.3s ease;
 
-        h3 {
-          font-size: 1.5rem;
-          font-weight: 600;
-          margin-bottom: 0.5rem;
+        &:hover {
+          transform: translateY(-2px);
+          background: rgba(255, 255, 255, 0.15);
         }
 
-        p {
-          opacity: 0.8;
+        .icon {
+          font-size: 1.75rem;
+          opacity: 0.9;
+          width: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .feature-content {
+          h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            font-size: 0.9375rem;
+            opacity: 0.8;
+            line-height: 1.6;
+          }
         }
       }
     }
 
     .testimonial {
+      margin-top: auto;
       background: rgba(255, 255, 255, 0.1);
       padding: 2rem;
       border-radius: 1rem;
 
-      > p {
+      p {
         font-size: 1.125rem;
         font-style: italic;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
         line-height: 1.6;
       }
 
       .testimonial-author {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+        font-size: 0.9375rem;
+        opacity: 0.8;
+        font-weight: 500;
+      }
+    }
+  }
 
-        img {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
+  @media (max-width: 1024px) {
+    .left-panel {
+      padding: 2rem;
+
+      .logo {
+        margin-bottom: 3rem;
+      }
+
+      .content {
+        gap: 2rem;
+
+        h1 {
+          font-size: 2rem;
         }
 
-        h4 {
-          font-weight: 600;
-          margin-bottom: 0.25rem;
+        > p {
+          font-size: 1.125rem;
         }
+      }
 
-        p {
-          opacity: 0.8;
-          font-size: 0.875rem;
+      .features {
+        .feature-item {
+          padding: 1.5rem;
         }
       }
     }
   }
+
+
 
   .right-panel {
     background-color: #f8fafc;
