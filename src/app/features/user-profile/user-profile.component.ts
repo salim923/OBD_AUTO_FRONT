@@ -16,8 +16,9 @@ import {MatIconModule} from "@angular/material/icon";
   imports: [
     NgForOf,
     ReactiveFormsModule,
-    RouterLink,HttpClientModule, ReactiveFormsModule, MatInputModule, MatButtonModule, MatIconModule, RouterLink, FormsModule
+    RouterLink, HttpClientModule, ReactiveFormsModule, MatInputModule, MatButtonModule, MatIconModule, RouterLink, FormsModule
   ],
+  standalone: true,
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent implements OnInit {
