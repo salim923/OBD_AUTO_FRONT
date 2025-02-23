@@ -3,6 +3,7 @@ import { DefaultLayoutComponent } from './layout';
 import { AuthGuard } from '../guards/auth.guard';
 import {AuthRedirectComponent} from "./services/Auth-redirect/Auth-redirect.component";
 import {PrivacyPolicyComponent} from "./views/pages/privacy-policy/privacy-policy.component";
+import {UserProfileComponent} from "./features/user-profile/user-profile.component";
 
 export const routes: Routes = [
   {
@@ -74,6 +75,13 @@ export const routes: Routes = [
     loadComponent: () => import('./views/pages/privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent),
     data: {
       title: 'Privacy-policy'
+    }
+  },
+  {
+    path: 'user-profile',
+    loadComponent: () => import('./features/user-profile/user-profile.component').then(m => m.UserProfileComponent),
+    data: {
+      title: 'User-profile'
     }
   },
   {

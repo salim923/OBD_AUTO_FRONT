@@ -61,7 +61,7 @@ export class RegisterComponent implements OnInit {
   }
 
   signInWithGoogle() {
-    this.authService.loginWithGoogle();
+    this.authService.registerWithGoogle();
   }
 
   signInWithGitHub() {

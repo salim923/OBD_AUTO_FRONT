@@ -25,7 +25,7 @@ export class AuthService {
     window.location.href = 'https://localhost:7202/api/jwtauth/auth/facebook';
   }
   loginWithGoogle(): void {
-    window.location.href = 'https://localhost:7202/api/jwtauth/auth/google';
+    window.location.href = 'https://localhost:7202/api/auth/googleauth/login';
   }
   loginWithGitHub(): void {
     window.location.href = 'https://localhost:7202/login-github';
@@ -47,5 +47,9 @@ export class AuthService {
   logout() {
     localStorage.removeItem('token');
     this.router.navigate(['/']);
+  }
+
+  registerWithGoogle() {
+    window.location.href = 'https://localhost:7202/api/auth/googleauth/signup-google';
   }
 }
