@@ -32,7 +32,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Check for JWT token on app initialization
     console.log('AppComponent initialized');
     const token = localStorage.getItem('token');
     console.log('tokend',token);

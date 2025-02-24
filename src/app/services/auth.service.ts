@@ -28,7 +28,7 @@ export class AuthService {
     window.location.href = 'https://localhost:7202/api/auth/googleauth/login';
   }
   loginWithGitHub(): void {
-    window.location.href = 'https://localhost:7202/login-github';
+    window.location.href = 'https://localhost:7202/api/auth/githubauth/login-github';
   }
 
 
@@ -45,11 +45,21 @@ export class AuthService {
   }
 
   logout() {
+    console.log('Before logout:', localStorage.getItem('token'), localStorage.getItem('userName'), localStorage.getItem('email'));
     localStorage.removeItem('token');
-    this.router.navigate(['/']);
+    localStorage.removeItem('userName');
+    localStorage.removeItem('email');
+    console.log('After logout:', localStorage.getItem('token'), localStorage.getItem('userName'), localStorage.getItem('email'));
+    this.http.post(`${this.apiUrl}/logout`, {}).subscribe(() => {
+      this.router.navigate(['/']);
+    });
   }
-
   registerWithGoogle() {
     window.location.href = 'https://localhost:7202/api/auth/googleauth/signup-google';
+  }
+
+  registerWithGitHub() {
+
+    window.location.href = 'https://localhost:7202/api/auth/githubauth/signup-github';
   }
 }

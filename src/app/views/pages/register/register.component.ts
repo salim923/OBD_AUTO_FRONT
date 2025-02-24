@@ -65,7 +65,7 @@ export class RegisterComponent implements OnInit {
   }
 
   signInWithGitHub() {
-    this.authService.loginWithGitHub();
+    this.authService.registerWithGitHub();
   }
   signInWithApple() {
   }
